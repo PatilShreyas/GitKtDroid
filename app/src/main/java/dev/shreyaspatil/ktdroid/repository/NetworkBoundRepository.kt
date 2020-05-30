@@ -20,11 +20,11 @@ abstract class NetworkBoundRepository<T> {
             val apiResponse = fetchFromRemote()
 
             // Parse body
-            val remotePosts = apiResponse.body()
+            val body = apiResponse.body()
 
             // Check for response validation
-            if (apiResponse.isSuccessful && remotePosts != null) {
-                emit(State.success(remotePosts))
+            if (apiResponse.isSuccessful && body != null) {
+                emit(State.success(body))
             } else {
                 // Something went wrong! Emit Error state.
                 emit(State.error(apiResponse.message()))
