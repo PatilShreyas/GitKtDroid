@@ -2,4 +2,13 @@
     <string name="app_name">Top KtDroid Repositories</string>
     <string name="message_back_pressed">Press back again to exit</string>
     <string name="message_error_loading">Error occurred</string>
+    <string name="hint_username_1">Username 1</string>
+    <string name="hint_username_2">Username 2</string>
+    <string name="button_load_label">Load Players</string>
+    <string name="button_play_label">Play Game</string>
+    <string name="message_error_input">Invalid GitHub username</string>
+    <string name="message_result_won">%s won this match!</string>
+    <string name="message_result_tie">This match has been tied!</string>
+    <string name="text_zero">0</string>
+    <string name="message_duplicate_id">Both username should not same</string>
 </resources>
