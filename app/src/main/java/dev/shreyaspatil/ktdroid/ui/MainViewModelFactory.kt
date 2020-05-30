@@ -16,7 +16,7 @@ class MainViewModelFactory(private val context: Context) : ViewModelProvider.Fac
 
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         return modelClass.getConstructor(KtDroidGitHubRepository::class.java).newInstance(
-            getGitHubService(context)
+            KtDroidGitHubRepository(getGitHubService(context))
         )
     }
 }
