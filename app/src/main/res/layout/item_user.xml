@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dimen_16">
+
+    <ImageView
+        android:id="@+id/avatarView"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_person"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/player_username"
+        style="@style/RepoOwner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/avatarView"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="@+id/avatarView"
+        app:layout_constraintTop_toBottomOf="@+id/avatarView"
+        tools:text="@tools:sample/first_names" />
+
+    <ImageView
+        android:id="@+id/imageStar"
+        style="@style/RepoStarsImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        app:layout_constraintEnd_toStartOf="@+id/user_stars"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/player_username"
+        app:layout_constraintTop_toBottomOf="@+id/player_username"
+        app:srcCompat="@drawable/ic_star" />
+
+    <TextView
+        android:id="@+id/user_stars"
+        style="@style/RepoStars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_zero"
+        app:layout_constraintBottom_toBottomOf="@+id/imageStar"
+        app:layout_constraintEnd_toEndOf="@+id/player_username"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageStar"
+        app:layout_constraintTop_toTopOf="@+id/imageStar" />
+
+    <TextView
+        android:id="@+id/user_followers"
+        style="@style/RepoStars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_zero"
+        app:layout_constraintBottom_toBottomOf="@+id/imageFollowers"
+        app:layout_constraintEnd_toEndOf="@+id/user_stars"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageFollowers"
+        app:layout_constraintTop_toTopOf="@+id/imageFollowers" />
+
+    <ImageView
+        android:id="@+id/imageFollowers"
+        style="@style/RepoStarsImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageStar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageStar"
+        app:layout_constraintTop_toBottomOf="@+id/imageStar"
+        app:srcCompat="@drawable/ic_followers" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageFollowers" />
+
+    <TextView
+        android:id="@+id/user_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/text_zero"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+</androidx.constraintlayout.widget.ConstraintLayout>
