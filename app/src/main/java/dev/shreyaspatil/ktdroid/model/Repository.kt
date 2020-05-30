@@ -16,7 +16,7 @@ data class Repository(
     @Json(name = "html_url")
     val repoUrl: String,
 
-    val description: String,
+    val description: String?,
     val owner: Owner
 )
 
