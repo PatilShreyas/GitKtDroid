@@ -17,7 +17,7 @@ class KtDroidGitHubRepository(private val githubService: GitHubService) {
     fun getRepositories(): Flow<State<Repositories>> {
         return object : NetworkBoundRepository<Repositories>() {
             override suspend fun fetchFromRemote(): Response<Repositories> =
-                githubService.getRepositories()
+                githubService.getKtAndroidRepositories()
         }.asFlow().flowOn(Dispatchers.IO)
     }
 }
