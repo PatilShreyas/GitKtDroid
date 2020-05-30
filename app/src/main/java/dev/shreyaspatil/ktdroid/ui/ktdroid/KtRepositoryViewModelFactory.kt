@@ -1,4 +1,4 @@
-package dev.shreyaspatil.ktdroid.ui
+package dev.shreyaspatil.ktdroid.ui.ktdroid
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
@@ -12,7 +12,7 @@ import kotlinx.coroutines.InternalCoroutinesApi
 @ExperimentalCoroutinesApi
 @FlowPreview
 @InternalCoroutinesApi
-class MainViewModelFactory(private val context: Context) : ViewModelProvider.Factory {
+class KtRepositoryViewModelFactory(private val context: Context) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         return modelClass.getConstructor(KtDroidGitHubRepository::class.java).newInstance(

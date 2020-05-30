@@ -1,4 +1,4 @@
-package dev.shreyaspatil.ktdroid.ui
+package dev.shreyaspatil.ktdroid.ui.ktdroid
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,11 +7,11 @@ import androidx.core.net.toUri
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.snackbar.Snackbar
 import dev.shreyaspatil.ktdroid.R
-import dev.shreyaspatil.ktdroid.databinding.ActivityMainBinding
-import dev.shreyaspatil.ktdroid.ui.adapter.RepositoryAdapter
+import dev.shreyaspatil.ktdroid.databinding.ActivityRepositoryListBinding
+import dev.shreyaspatil.ktdroid.ui.ktdroid.adapter.RepositoryAdapter
 import dev.shreyaspatil.ktdroid.utils.State
+import dev.shreyaspatil.ktdroid.utils.showSnackbar
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.InternalCoroutinesApi
@@ -21,24 +21,27 @@ import kotlinx.coroutines.launch
 @FlowPreview
 @ExperimentalCoroutinesApi
 @InternalCoroutinesApi
-class MainActivity : AppCompatActivity() {
+class KtRepositoryActivity : AppCompatActivity() {
 
     private val viewModel by lazy {
-        ViewModelProvider(this, MainViewModelFactory(this))[MainViewModel::class.java]
+        ViewModelProvider(
+            this,
+            KtRepositoryViewModelFactory(this)
+        )[KtRepositoryViewModel::class.java]
     }
 
     private val adapter by lazy {
         RepositoryAdapter(::onRepoItemClicked)
     }
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityRepositoryListBinding
 
     // Useful when back navigation is pressed.
     private var backPressedTime = 0L
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityRepositoryListBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
 
@@ -49,8 +52,8 @@ class MainActivity : AppCompatActivity() {
     private fun initViews() {
         // Initialize RecyclerView
         binding.reposRecyclerView.apply {
-            layoutManager = LinearLayoutManager(this@MainActivity)
-            adapter = this@MainActivity.adapter
+            layoutManager = LinearLayoutManager(this@KtRepositoryActivity)
+            adapter = this@KtRepositoryActivity.adapter
         }
 
         // Initialize SwipeRefreshLayout
@@ -95,9 +98,5 @@ class MainActivity : AppCompatActivity() {
         showSnackbar(getString(R.string.message_back_pressed))
 
         backPressedTime = System.currentTimeMillis()
-    }
-
-    private fun showSnackbar(message: String) {
-        Snackbar.make(binding.root, message, Snackbar.LENGTH_SHORT)
     }
 }

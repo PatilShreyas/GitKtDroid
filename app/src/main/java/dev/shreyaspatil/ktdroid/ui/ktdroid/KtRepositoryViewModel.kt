@@ -1,4 +1,4 @@
-package dev.shreyaspatil.ktdroid.ui
+package dev.shreyaspatil.ktdroid.ui.ktdroid
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -16,7 +16,7 @@ import kotlinx.coroutines.launch
 @InternalCoroutinesApi
 @ExperimentalCoroutinesApi
 @FlowPreview
-class MainViewModel(private val repository: KtDroidGitHubRepository) : ViewModel() {
+class KtRepositoryViewModel(private val repository: KtDroidGitHubRepository) : ViewModel() {
     private val _repositories =
         MutableStateFlow<State<Repositories>>(State.loading())
 

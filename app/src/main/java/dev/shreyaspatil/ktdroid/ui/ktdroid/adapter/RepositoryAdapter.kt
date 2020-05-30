@@ -1,4 +1,4 @@
-package dev.shreyaspatil.ktdroid.ui.adapter
+package dev.shreyaspatil.ktdroid.ui.ktdroid.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -10,7 +10,9 @@ import dev.shreyaspatil.ktdroid.databinding.ItemRepoBinding
 import dev.shreyaspatil.ktdroid.model.Repository
 
 class RepositoryAdapter(private val onClick: (String) -> Unit) :
-    ListAdapter<Repository, RepositoryAdapter.RepoViewHolder>(DIFF_CALLBACK) {
+    ListAdapter<Repository, RepositoryAdapter.RepoViewHolder>(
+        DIFF_CALLBACK
+    ) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = RepoViewHolder(
         ItemRepoBinding.inflate(
