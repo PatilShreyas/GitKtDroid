@@ -65,4 +65,16 @@
         <item name="android:layout_marginBottom">8dp</item>
     </style>
 
+    <style name="UsernameTextInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="startIconDrawable">@drawable/ic_github</item>
+        <item name="iconPadding">@dimen/dimen_4</item>
+    </style>
+
+    <style name="TextCard">
+        <item name="android:layout_marginTop">@dimen/dimen_8</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
 </resources>
