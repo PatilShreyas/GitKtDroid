@@ -11,7 +11,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
 @ExperimentalCoroutinesApi
-fun getGitHubService(context: Context) =
+fun getGitHubService(context: Context): GitHubService =
     Retrofit.Builder()
         .baseUrl(GitHubService.BASE_URL)
         .addConverterFactory(

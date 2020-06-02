@@ -12,7 +12,7 @@ interface GitHubService {
     @GET("/search/repositories?q=android+language:kotlin&sort=stars&order=desc&per_page=100")
     suspend fun getKtAndroidRepositories(): Response<Repositories>
 
-    @GET("/users/{user}/")
+    @GET("/users/{user}")
     suspend fun getUser(@Path("user") username: String): Response<User>
 
     @GET("/users/{user}/repos?per_page=10000000")
