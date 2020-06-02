@@ -18,7 +18,7 @@ import kotlinx.coroutines.launch
 @FlowPreview
 class KtRepositoryViewModel(private val repository: KtDroidGitHubRepository) : ViewModel() {
     private val _repositories =
-        MutableStateFlow<State<Repositories>>(State.loading())
+        MutableStateFlow<State<Repositories>>(State.idle())
 
     val repositories: StateFlow<State<Repositories>> = _repositories
 

@@ -36,9 +36,6 @@ class KtRepositoryActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRepositoryListBinding
 
-    // Useful when back navigation is pressed.
-    private var backPressedTime = 0L
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRepositoryListBinding.inflate(layoutInflater)
@@ -50,6 +47,9 @@ class KtRepositoryActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
+        title = getString(R.string.title_ktrepo_activity)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         // Initialize RecyclerView
         binding.reposRecyclerView.apply {
             layoutManager = LinearLayoutManager(this@KtRepositoryActivity)
@@ -88,15 +88,5 @@ class KtRepositoryActivity : AppCompatActivity() {
         startActivity(Intent(Intent.ACTION_VIEW).apply {
             data = repoUrl.toUri()
         })
-    }
-
-    override fun onBackPressed() {
-        if (backPressedTime + 2000 > System.currentTimeMillis()) {
-            super.onBackPressed()
-            return
-        }
-        showSnackbar(getString(R.string.message_back_pressed))
-
-        backPressedTime = System.currentTimeMillis()
     }
 }
