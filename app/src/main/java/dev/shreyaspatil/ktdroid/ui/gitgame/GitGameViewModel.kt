@@ -21,12 +21,10 @@ typealias UserStatePair = Pair<State<User>, State<User>>
 @FlowPreview
 class GitGameViewModel(private val repository: UserRepository) : ViewModel() {
     private val _playersState =
-        MutableStateFlow<UserStatePair>(Pair(State.loading(), State.loading()))
+        MutableStateFlow<UserStatePair>(Pair(State.idle(), State.idle()))
 
     private val _gameState =
-        MutableStateFlow<State<GameResult>>(State.loading())
-
-//    private lateinit var _currentPlayers: MutableStateFlow<Pair<User, User>>
+        MutableStateFlow<State<GameResult>>(State.idle())
 
     val playersState: StateFlow<UserStatePair> = _playersState
     val gameState: StateFlow<State<GameResult>> = _gameState
