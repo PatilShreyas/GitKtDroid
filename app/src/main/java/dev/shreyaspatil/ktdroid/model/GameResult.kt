@@ -13,8 +13,8 @@ data class GameResult(
 
     operator fun Pair<Int, Int>.div(other: Pair<Int, Int>): Pair<Double, Double> {
         return Pair(
-            (this.first / other.first.toDouble()),
-            (this.second / other.second.toDouble())
+            if (other.first == 0) 0.0 else (this.first / other.first.toDouble()),
+            if (other.second == 0) 0.0 else (this.second / other.second.toDouble())
         )
     }
 
