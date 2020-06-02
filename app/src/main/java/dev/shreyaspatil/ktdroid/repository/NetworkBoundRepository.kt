@@ -26,7 +26,7 @@ abstract class NetworkBoundRepository<T> {
             if (apiResponse.isSuccessful && body != null) {
                 emit(State.success(body))
             } else {
-                // Something went wrong! Emit Error state.
+                // Something went wrong! Emit Error state with message.
                 emit(State.error(apiResponse.message()))
             }
         } catch (e: Exception) {
