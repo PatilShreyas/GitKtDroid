@@ -66,8 +66,8 @@ class GitGameActivity : AppCompatActivity() {
                         binding.warAnimationView.show()
                     }
 
-                    userState.first is State.Error -> showFieldError(binding.fieldUsername1)
-                    userState.second is State.Error -> showFieldError(binding.fieldUsername2)
+                    userState.first is State.Error -> showSnackbar((userState.first as State.Error<User>).message)
+                    userState.second is State.Error -> showSnackbar((userState.second as State.Error<User>).message)
                 }
             }
         }
@@ -106,19 +106,24 @@ class GitGameActivity : AppCompatActivity() {
         viewModel.playGame()
     }
 
-
     private fun showPlayers(user1: User, user2: User) {
         binding.run {
             player1.run {
                 playerUsername.text = user1.username
                 avatarView.load(user1.avatarUrl)
+                userStars.text = "0"
+                userFollowers.text = "0"
+                userScore.text = "0"
             }
             player2.run {
                 playerUsername.text = user2.username
                 avatarView.load(user2.avatarUrl)
+                userStars.text = "0"
+                userFollowers.text = "0"
+                userScore.text = "0"
             }
         }
-
+        binding.textResult.text = getString(R.string.message_click_play)
         binding.buttonPlay.enable()
     }
 
@@ -194,6 +199,7 @@ class GitGameActivity : AppCompatActivity() {
     }
 
     private fun hideAnimationView(view: LottieAnimationView) {
+        view.cancelAnimation()
         view.invisible()
     }
 }

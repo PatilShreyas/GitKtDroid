@@ -66,6 +66,9 @@
     </style>
 
     <style name="UsernameTextInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textSize">12sp</item>
         <item name="startIconDrawable">@drawable/ic_github</item>
         <item name="iconPadding">@dimen/dimen_4</item>
     </style>

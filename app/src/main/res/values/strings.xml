@@ -17,4 +17,5 @@
     <string name="text_info">Play GitHub Battle - Compare your profile with other developers on GitHub. This is just for fun. Enjoy!! ;) \n------\nSee top 100 repositories of #AndroidDev developed using Kotlin :)</string>
     <string name="title_game_activity">GitHub Battle</string>
     <string name="title_ktrepo_activity">Top KtDroid Repositories</string>
+    <string name="message_click_play">Click \'Start\' to play game!</string>
 </resources>

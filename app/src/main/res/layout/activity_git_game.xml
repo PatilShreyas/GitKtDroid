@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -28,7 +27,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:maxLines="1" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -48,7 +48,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:maxLines="1" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -80,7 +81,7 @@
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/sword_battle" />
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
             android:id="@+id/cardView1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -88,7 +89,6 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="16dp"
-            app:cardBackgroundColor="@android:color/transparent"
             app:layout_constraintBottom_toTopOf="@+id/text_result"
             app:layout_constraintEnd_toStartOf="@+id/cardView2"
             app:layout_constraintHorizontal_bias="0.5"
@@ -106,9 +106,9 @@
                     layout="@layout/item_user" />
             </FrameLayout>
 
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
             android:id="@+id/cardView2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -116,7 +116,6 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="16dp"
-            app:cardBackgroundColor="@android:color/transparent"
             app:layout_constraintBottom_toTopOf="@+id/text_result"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -132,7 +131,7 @@
                     android:id="@+id/player2"
                     layout="@layout/item_user" />
             </FrameLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_play"
