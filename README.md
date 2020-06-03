@@ -5,9 +5,7 @@
 
 ![Build](https://github.com/PatilShreyas/GitKtDroid/workflows/Build/badge.svg?branch=master)
 [![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-
-***Install App 👉***
-[![GitHub KtDroid](https://img.shields.io/badge/GitKtDroid-APK-blue.svg?style=for-the-badge&logo=android)](https://github.com/PatilShreyas/GitKtDroid/releases/download/v1.0/app-debug.apk)
+[![GitHub KtDroid](https://img.shields.io/badge/GitKtDroid-APK-blue.svg?logo=android)](https://github.com/PatilShreyas/GitKtDroid/releases/download/v1.0/app-debug.apk)
 
 This is just a sample app which is build with Kotlin🦸superpower and *Modern Android development* tools! It has below options:
 
