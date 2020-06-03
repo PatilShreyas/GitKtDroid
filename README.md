@@ -1,7 +1,6 @@
 # GitKtDroid
 
-// TODO Add CI
-![CI](https://github.com/PatilShreyas/GitKtDroid/workflows/CI/badge.svg?branch=master)
+![Build](https://github.com/PatilShreyas/GitKtDroid/workflows/Build/badge.svg?branch=master)
 [![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 // TODO Intro
