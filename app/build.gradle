@@ -63,6 +63,7 @@ dependencies {
     def junit_version = '4.13'
     def arch_testing = '2.1.0'
     def okhttp_mock_version = '4.4.0'
+    def android_test_version = '1.2.0'
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
@@ -104,6 +105,8 @@ dependencies {
     testImplementation "junit:junit:$junit_version"
     testImplementation "androidx.arch.core:core-testing:$arch_testing"
     testImplementation "com.squareup.okhttp3:mockwebserver:$okhttp_mock_version"
+    androidTestImplementation "androidx.test:runner:$android_test_version"
+    androidTestImplementation "androidx.test:rules:$android_test_version"
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
