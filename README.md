@@ -1,18 +1,40 @@
+> *This repository contains Android project which is developed for the [**#30DaysOfKotlin**](https://twitter.com/hashtag/30daysofkotlin?lang=en) with Google Developers (Initiative to improve your understanding of Kotlin and apply it in real projects).* 
+> Know more about it [here](https://eventsonair.withgoogle.com/events/kotlin).
+
 # GitKtDroid
 
 ![Build](https://github.com/PatilShreyas/GitKtDroid/workflows/Build/badge.svg?branch=master)
 [![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-// TODO Intro
+This is just a sample app which is build with Kotlin🦸superpower and *Modern Android development* tools! It has below options:
+
+- **GitHub Battle:** This is just for fun! :) Here you just need to enter your and opponent's GitHub username. Those who have more stars and followers will be the winner. Calculation of score is as below.
+
+  `Score = (Total Stars⭐ / Total Repositories💼) + Followers🙋‍♂️`
+  
+- **Top 100 Kotlin-Android Repos:** It shows Top 100 Android related repositories on GitHub which are developed using Kotlin!
+
+---
 
 ***You can Install and test latest built app from below 👇***
 
 [![GitHub KtDroid](https://img.shields.io/badge/GitKtDroid-APK-blue.svg?style=for-the-badge&logo=android)](https://github.com/PatilShreyas/GitKtDroid/releases/download/v1.0/app-debug.apk)
 
-// TODO Screenshots
+--- 
 
-## About
-// TODO Update this
+## Preview
+<table style="width:100%">
+  <tr>
+    <th>Home</th>
+    <th>GitHub Game (Battle)</th>
+    <th>KtDroid Repositories</th>
+  </tr>
+  <tr>
+    <td><img src="art/Home.jpg"/></td>
+    <td><img src="art/Battle.gif"/></td>
+    <td><img src="art/List.jpg"</td>
+  </tr>
+</table>
 
 ## Built With 🛠
 - [Kotlin](https://kotlinlang.org/) - First class and official programming language for Android development.
