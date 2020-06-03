@@ -6,6 +6,9 @@
 ![Build](https://github.com/PatilShreyas/GitKtDroid/workflows/Build/badge.svg?branch=master)
 [![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
+***Install App 👉***
+[![GitHub KtDroid](https://img.shields.io/badge/GitKtDroid-APK-blue.svg?style=for-the-badge&logo=android)](https://github.com/PatilShreyas/GitKtDroid/releases/download/v1.0/app-debug.apk)
+
 This is just a sample app which is build with Kotlin🦸superpower and *Modern Android development* tools! It has below options:
 
 - **GitHub Battle:** This is just for fun! :) Here you just need to enter your and opponent's GitHub username. Those who have more stars and followers will be the winner. Calculation of score is as below.
@@ -15,12 +18,6 @@ This is just a sample app which is build with Kotlin🦸superpower and *Modern A
 - **Top 100 Kotlin-Android Repos:** It shows Top 100 Android related repositories on GitHub which are developed using Kotlin!
 
 ---
-
-***You can Install and test latest built app from below 👇***
-
-[![GitHub KtDroid](https://img.shields.io/badge/GitKtDroid-APK-blue.svg?style=for-the-badge&logo=android)](https://github.com/PatilShreyas/GitKtDroid/releases/download/v1.0/app-debug.apk)
-
---- 
 
 ## Preview
 <table style="width:100%">
