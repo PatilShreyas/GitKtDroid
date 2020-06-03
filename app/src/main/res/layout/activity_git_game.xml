@@ -10,6 +10,19 @@
         android:layout_height="match_parent"
         tools:context=".ui.gitgame.GitGameActivity">
 
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/warAnimationView"
+            android:layout_width="84dp"
+            android:layout_height="0dp"
+            android:elevation="2dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cardView2"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/sword_battle" />
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/fieldUsername1"
             style="@style/UsernameTextInput"
@@ -68,18 +81,42 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fieldUsername1" />
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/warAnimationView"
-            android:layout_width="84dp"
-            android:layout_height="0dp"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_play"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/colorAccent"
+            android:enabled="false"
+            android:text="@string/button_start_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_load"
+            app:layout_constraintTop_toBottomOf="@+id/fieldUsername2" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/cardView2"
+            android:text="@string/message_guide"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_load"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/sword_battle" />
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
 
         <com.google.android.material.circularreveal.cardview.CircularRevealCardView
             android:id="@+id/cardView1"
@@ -130,44 +167,9 @@
                 <include
                     android:id="@+id/player2"
                     layout="@layout/item_user" />
+
             </FrameLayout>
         </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_play"
-            style="@style/Widget.MaterialComponents.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:backgroundTint="@color/colorAccent"
-            android:enabled="false"
-            android:text="@string/button_start_label"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button_load"
-            app:layout_constraintTop_toBottomOf="@+id/fieldUsername2" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/message_guide"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/text_result"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:textColor="@android:color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
