@@ -7,7 +7,7 @@
 [![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![GitHub KtDroid](https://img.shields.io/github/v/release/patilshreyas/gitktdroid?color=%23FFFF&label=Download%20APK&logo=android)](https://github.com/patilshreyas/gitktdroid/releases/latest/download/app.apk)
 
-This is just a sample app which is build with Kotlin🦸superpower and *Modern Android development* tools! It has below options:
+This is just a sample app which is built with Kotlin🦸superpower and *Modern Android development* tools! It has below options:
 
 - **GitHub Battle:** This is just for fun! :) Here you just need to enter your and opponent's GitHub username. Those who have more stars and followers will be the winner. Calculation of score is as below.
 
